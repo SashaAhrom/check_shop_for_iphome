@@ -45,7 +45,6 @@ def get_content(html):
         city = item.find('span', class_='city').get_text().strip()
         status = item.find('div', class_='shop-availibility').find_next('span').get_text()
         citys[city] = status
-    logging.info(citys)
     return citys
     
 def parse():
